@@ -71,7 +71,7 @@
                     .then(data => {
                         this._rawData = data;
                         this.startRefreshCountdown();
-                        console.log(this._rawdata);
+                        console.log(data);
                         const event = new Event("onDataUpdate");
                         this.dispatchEvent(event);
                     });

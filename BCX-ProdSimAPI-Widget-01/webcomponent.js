@@ -41,7 +41,7 @@
         </div>
     `;
 
-    class RSSDataSource extends HTMLElement {
+    customElements.define('com-sap-sample-prodsimapi01', class ProdSimAPI01 extends HTMLElement {
         constructor() {
             super();
                 this.appendChild(tmpl.content.cloneNode(true));
@@ -107,6 +107,6 @@
         }
 
 
-    }
+    });
     
 })();

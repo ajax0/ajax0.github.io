@@ -106,19 +106,7 @@
                 this._props = { ...this._props, ...oChangedProperties};
         }
 
-        getRawData() {
-            return this._rawData || {};
-        }
-        
-        getJSONData(type) {
-            let data = {};
-        
-            if(type == "raw") {
-                data = this.getRawData();
-            }
-        
-            return JSON.stringify(data);
-        }
+
     }
     
 })();

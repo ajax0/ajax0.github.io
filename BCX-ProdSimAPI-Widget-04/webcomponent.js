@@ -8,7 +8,12 @@
                 justify-content: space-between;
                 align-items: center;
             }
-
+            .data-set {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
             .datasource > div {
                 display: inline-block;
                 vertical-align: middle;
@@ -39,8 +44,8 @@
                 <button id="refresh">Refresh Now</button>
             </div>
         </div>
-        <div class="dataset">
-            <div class="label">data:>/div>
+        <div class="data-set">
+            <div class="label">Data:>/div>
             <div class="value">None</div>
         </div>
     `;
@@ -79,7 +84,7 @@
                         const event = new Event("onDataUpdate");
                         this.dispatchEvent(event);
                     });
-                    this.$div.querySelector(".dataset .value").innerText = data;
+                    this.$div.querySelector(".dataset .value").innerText = this._rawData;
             }
 
             getRawData() {

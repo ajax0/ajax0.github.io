@@ -21,10 +21,7 @@
 	"properties": {
 	},
 	"methods": {
-		"getJSONData": {
-			"description": "get JSON Data",
-			"body": "this.dataset = 'data';"
-		}
+
 	},
 	"events": {
 		

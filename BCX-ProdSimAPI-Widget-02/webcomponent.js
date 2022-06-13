@@ -65,7 +65,7 @@
             }
     
             updateData(url) {
-                console.log(url);
+                console.log("deleted url");
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
@@ -75,6 +75,21 @@
                         const event = new Event("onDataUpdate");
                         this.dispatchEvent(event);
                     });
+                console.log(this._rawdata);
+            }
+
+            getRawData() {
+                return this._rawData || {};
+            }
+            
+            getJSONData(type) {
+                let data = {};
+            
+                if(type == "raw") {
+                    data = this.getRawData();
+                }
+            
+                return JSON.stringify(data);
             }
     
             startRefreshCountdown() {

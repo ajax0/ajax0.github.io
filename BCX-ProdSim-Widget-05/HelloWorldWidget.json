@@ -61,7 +61,7 @@
 				{
 					"name": "newTextValue",
 					"type": "string",
-					"description": "The displayed angle of the gauge"
+					"description": "The displayed text of the Helllo World 5 widget"
 				}
 			],
 			"body": "this.widgetText = newTextValue;"
@@ -69,7 +69,7 @@
 	},
 	"events": {
 		"onClick": {
-			"description": "Called when the user clicks the Gauge"
+			"description": "Called when the user clicks the Hello World 5 widget"
 		}
 	}
 }

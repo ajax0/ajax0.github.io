@@ -38,6 +38,10 @@
                 <div class="value">Never</div>
                 <button id="refresh">Refresh Now</button>
             </div>
+            <div class="dataset">
+                <div class="label">data:>/div>
+                <div class="value"></div>
+            </div>
         </div>
     `;
 
@@ -75,7 +79,7 @@
                         const event = new Event("onDataUpdate");
                         this.dispatchEvent(event);
                     });
-                
+                    this.$div.querySelector(".dataset .value").innerText = data;
             }
 
             getRawData() {

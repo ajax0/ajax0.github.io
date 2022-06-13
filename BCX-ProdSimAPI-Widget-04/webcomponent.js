@@ -38,10 +38,10 @@
                 <div class="value">Never</div>
                 <button id="refresh">Refresh Now</button>
             </div>
-            <div class="dataset">
-                <div class="label">data:>/div>
-                <div class="value"></div>
-            </div>
+        </div>
+        <div class="dataset">
+            <div class="label">data:>/div>
+            <div class="value">None</div>
         </div>
     `;
 

@@ -6,7 +6,7 @@
 				<legend>Custom Widget Text</legend>
 				<table>
 					<tr>
-						<td>Text</td>
+						<td>Text to be printed on screen</td>
 						<td><input id="aps_text" type="string"></td>
 					</tr>
 				</table>

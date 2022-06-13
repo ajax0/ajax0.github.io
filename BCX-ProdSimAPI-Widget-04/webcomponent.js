@@ -88,7 +88,8 @@
                 if(type == "raw") {
                     data = this.getRawData();
                 }
-            
+                console.log("from getJSONData");
+                console.log(data);
                 return JSON.stringify(data);
             }
     

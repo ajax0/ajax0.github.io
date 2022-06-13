@@ -3,7 +3,7 @@
     tmpl.innerHTML = `
     `;
 
-    customElements.define('com-sap-sample-helloworld3', class HelloWorld extends HTMLElement {
+    customElements.define('com-sap-sample-helloworld4', class HelloWorld extends HTMLElement {
 
 
 		constructor() {
@@ -57,11 +57,19 @@
         //Getters and Setters
             get widgetText() {
                 return this._tagType;
-            }
+                }
 
             set widgetText(value) {
                 this._tagText = value;
-            }
+                }
+
+            get headingType() {
+                return this._tagType;
+                }
+    
+            set headingType(value) {
+                this._tagType = value;
+                }
         // End - Getters and Setters
 
         redraw(){

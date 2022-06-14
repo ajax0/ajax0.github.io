@@ -252,10 +252,12 @@
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
                                 console.log(data);
-                                let csvString = Object.keys(data.similar_products).map(field => data.similar_products[field]).join();
-                                console.log(csvString);
 
-                                _score = csvString;
+                                for (simProd in data['similar products']) {
+                                    console.log(simProd)
+                                }
+
+                                _score = data("similar pproducts");
 
                                 that._firePropertiesChanged();
                                 this.settings = {};

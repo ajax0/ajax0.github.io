@@ -240,14 +240,14 @@
 
                     onButtonPress: function(oEvent) {
 
-                        var partnernumber = oView.byId("input").getValue(); //"0004540866"
-                        console.log(partnernumber);
+                        var product = oView.byId("input").getValue(); //"0004540866"
+                        console.log(product);
 
                         $.ajax({
                             url: restAPIURL,
-                            type: 'POST',
+                            type: 'GET',
                             data: $.param({
-                                "partnernumber": partnernumber
+                                "product": product
                             }),
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {

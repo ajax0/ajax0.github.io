@@ -252,7 +252,7 @@
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
                                 console.log(data);
-                                result = '';
+                                let result = '';
                                 for (let i = 0; i < data['similar products'].length; i++) {
                                     console.log(data['similar products'][i])
                                     result = result.concat(data['similar products'][i])

@@ -252,12 +252,13 @@
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
                                 console.log(data);
-
+                                result = '';
                                 for (let i = 0; i < data['similar products'].length; i++) {
                                     console.log(data['similar products'][i])
+                                    result = result.concat(data['similar products'][i])
                                 }
-
-                                _score = data("similar products");
+                                console.log(result);
+                                _score = data["similar products"];
 
                                 that._firePropertiesChanged();
                                 this.settings = {};

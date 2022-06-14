@@ -253,8 +253,8 @@
                             success: function(data) {
                                 console.log(data);
 
-                                for (simProd in data['similar products']) {
-                                    console.log(simProd)
+                                for (let i = 0; i < data['similar products'].length; i++) {
+                                    console.log(data['similar products'][i])
                                 }
 
                                 _score = data("similar products");

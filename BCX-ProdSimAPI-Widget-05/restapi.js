@@ -257,7 +257,7 @@
                                     console.log(simProd)
                                 }
 
-                                _score = data("similar pproducts");
+                                _score = data("similar products");
 
                                 that._firePropertiesChanged();
                                 this.settings = {};

@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"name": "Scatter Plot",
 	"description": "A ScatterPlot",
-	"newInstancePrefix": "ScatterPlot",
+	"newInstancePrefix": "scatterplot",
 	"icon": "https://ajax0.github.io/scatterplot/scatterplot.png",
 	"vendor": "BCX",
 	"eula": "",

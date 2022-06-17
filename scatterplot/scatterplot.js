@@ -401,5 +401,5 @@
 		}
 	}
 
-	customElements.define("com-bcx-widget-scatterplot", ScatterPlot);
+	customElements.define("com-bcx-widget-scatterplot", scatterplot);
 })();

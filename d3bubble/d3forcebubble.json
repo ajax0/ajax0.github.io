@@ -14,21 +14,21 @@
 			"tag": "com-gmail-cse-ari007-d3forcebubble",
 			"url": "https://ajax0.github.io/d3bubble/d3forcebubble.js",
 			"integrity": "",
-			"ignoreIntegrity": false
+			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
 			"tag": "com-gmail-cse-ari007-d3forcebubble-sps",
 			"url": "https://ajax0.github.io/d3bubble/d3forcebubble_sps.js",
 			"integrity": "",
-			"ignoreIntegrity": false
+			"ignoreIntegrity": true
 		},
 		{
 			"kind": "builder",
 			"tag": "com-gmail-cse-ari007-d3forcebubble-bps",
 			"url": "https://ajax0.github.io/d3bubble/d3forcebubble_bps.js",
 			"integrity": "",
-			"ignoreIntegrity": false
+			"ignoreIntegrity": true
 		}
 	],
 	"properties": {

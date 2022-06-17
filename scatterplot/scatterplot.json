@@ -1,283 +1,71 @@
 {
-	"id": "com.bcx.scatterplot",
+	"id": "com.bcx.widget.scatterplot",
 	"version": "0.0.1",
 	"name": "Scatter Plot",
-	"description": "Scatter Plot Chart",
-	"newInstancePrefix": "SCATTERPLOT",
-	"icon": "https://ajax0.github.io/scatterplot/scatterplot_icon.png",
+	"description": "A ScatterPlot",
+	"newInstancePrefix": "scatterplot",
+	"icon": "https://ajax0.github.io/scatterplot/scatterplot.png",
 	"vendor": "BCX",
-	"eula": "The MIT License (MIT) \n Copyright (C) Microsoft Corporation. All rights reserved. \n Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
-	"license": "The MIT License (MIT)",
+	"eula": "",
+	"license": "",
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-bcx-scatterplot",
+			"tag": "com-bcx-widget-scatterplot",
 			"url": "https://ajax0.github.io/scatterplot/scatterplot.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		},
-		{
-			"kind": "styling",
-			"tag": "com-bcx-scatterplot-sps",
-			"url": "https://ajax0.github.io/scatterplot/scatterplot_sps.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		},
-		{
-			"kind": "builder",
-			"tag": "com-bcx-scatterplot-bps",
-			"url": "https://ajax0.github.io/scatterplot/scatterplot_bps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
 	],
 	"properties": {
-		"title": {
+		"label": {
 			"type": "string",
-			"description": "Chart title",
-			"default": "Custom Scatter Plot Widget"
+			"description": "label",
+			"default": "Label"
 		},
-		"showTitle": {
-			"type": "boolean",
-			"description": "Show title of the chart",
-			"default": true
-		},
-		"showAvg": {
-			"type": "boolean",
-			"description": "Show average line",
-			"default": true
-		},
-		"valDecimal": {
+		"value": {
 			"type": "integer",
-			"description": "Round x-axis value up to N decimal places",
-			"default": 2
-		},
-		"sizeDecimal": {
-			"type": "integer",
-			"description": "Round size value up to N decimal places",
-			"default": 2
-		},
-		"colorDecimal": {
-			"type": "integer",
-			"description": "Round color value up to N decimal places",
-			"default": 2
-		},
-		"xAxisLabel": {
-			"type": "string",
-			"description": "Name of measure on x-axis",
-			"default": "Value"
-		},
-		"sizeLabel": {
-			"type": "string",
-			"description": "Name of measure for bubble size",
-			"default": "Size"
-		},
-		"colorLabel": {
-			"type": "string",
-			"description": "Name of measure for bubble color",
-			"default": "Color"
-		},
-		"selectedLabel": {
-			"type": "string",
-			"description": "Label of selected bubble",
-			"default": "undefined"
-		},
-		"selectedXValue": {
-			"type": "number",
-			"description": "X-axis value of selected bubble",
-			"default": 0.0
-		},
-		"selectedSizeValue": {
-			"type": "number",
-			"description": "Size-axis value of selected bubble",
-			"default": 0.0
-		},
-		"selectedColorValue": {
-			"type": "number",
-			"description": "Color-axis value of selected bubble",
-			"default": 0.0
-		},		
-		"startColor": {
-			"type": "string",
-			"description": "Color of the bubble with lowest color value",
-			"default": "#ffcd00"
-		},
-		"endColor": {
-			"type": "string",
-			"description": "Color of the bubble with highest color value",
-			"default": "#b01c02"
-		},
-		"data": {
-			"type": "string",
-			"description": "Data in JSON format",
-			"default": "[{\"name\":\"Label 1\",\"size\":850.84, \"color\":50.7, \"xvalue\":100},{\"name\":\"Label 2\",\"size\":3308.76, \"color\":10, \"xvalue\":20.5}]"
-		},
-		"width": {
-			"type": "integer",
-			"default": 500
-		},
-		"height": {
-			"type": "integer",
-			"default": 170
+			"description": "value",
+			"default": 10
 		}
 	},
-	"methods": {	
-		"setStartColor": {
-			"description": "Sets the color of the bubble with lowest value.",
-			"parameters": [
-				{
-					"name": "newColor",
-					"type": "string",
-					"description": "Color of the bubble with lowest value"
-				}
-			],
-			"body": "this.startColor = newColor;"
-		},
-		"setEndColor": {
-			"description": "Sets the color of the bubble with highest value.",
-			"parameters": [
-				{
-					"name": "newColor",
-					"type": "string",
-					"description": "Color of the bubble with highest value"
-				}
-			],
-			"body": "this.endColor = newColor;"
-		},
-		"setTitleVisible": {
-			"description": "Show title of the chart.",
-			"parameters": [
-				{
-					"name": "flag",
-					"type": "boolean",
-					"description": "Show title of the chart"
-				}
-			],
-			"body": "this.showTitle = flag;"
-		},
-		"setAvgVisible": {
-			"description": "Show average line.",
-			"parameters": [
-				{
-					"name": "flag",
-					"type": "boolean",
-					"description": "Show average line"
-				}
-			],
-			"body": "this.showAvg = flag;"
-		},		
-		"setTitle": {
-			"description": "Sets the title of the chart.",
+	"methods": {
+		"setValue": {
+			"description": "Sets the gauge value.",
 			"parameters": [
 				{
 					"name": "newValue",
-					"type": "string",
-					"description": "The new title of chart"
+					"type": "integer",
+					"description": "The new gauge value."
 				}
 			],
-			"body": "this.title = newValue;"
+			"body": "this.value = newValue;"
 		},
-		"setData": {
-			"description": "Sets the data of the chart.",
+		"getValue": {
+			"returnType": "integer",
+			"description": "Returns the gauge value",
+			"body": "return this.value;"
+		},
+		"setLabel": {
+			"description": "Sets the label value.",
 			"parameters": [
 				{
-					"name": "newJSONData",
+					"name": "newLabel",
 					"type": "string",
-					"description": "The new data of chart"
+					"description": "The new label value."
 				}
 			],
-			"body": "this.data = newJSONData;"
+			"body": "this.label = newLabel;"
 		},
-		"getSelectedLabel": {
+		"getLabel": {
 			"returnType": "string",
-			"description": "Returns the label of selected bubble.",
-			"body": "return this.selectedLabel;"
-		},
-		"getSelectedXValue": {
-			"returnType": "number",
-			"description": "Returns the x-axis value of selected bubble.",
-			"body": "return this.selectedXValue;"
-		},
-		"getSelectedSizeValue": {
-			"returnType": "number",
-			"description": "Returns the size-axis value of selected bubble.",
-			"body": "return this.selectedSizeValue;"
-		},
-		"getSelectedColorValue": {
-			"returnType": "number",
-			"description": "Returns the color-axis value of selected bubble.",
-			"body": "return this.selectedColorValue;"
-		},
-		"setXAxisLabel": {
-			"description": "Sets the label of measure plotted on x-axis of the chart.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "string",
-					"description": "The new name of measure on x-axis"
-				}
-			],
-			"body": "this.xAxisLabel = newValue;"
-		},
-		"setSizeAxisLabel": {
-			"description": "Sets the label of measure represented by bubble size.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "string",
-					"description": "The new name of measure for bubble size"
-				}
-			],
-			"body": "this.sizeLabel = newValue;"
-		},
-		"setColorAxisLabel": {
-			"description": "Sets the label of measure represented by bubble color.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "string",
-					"description": "The new name of measure for bubble color"
-				}
-			],
-			"body": "this.colorLabel = newValue;"
-		},
-		"setValueDecimal": {
-			"description": "Sets the decimal places for measure on x-axis.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "integer",
-					"description": "Decimal places of measure on x-axis"
-				}
-			],
-			"body": "this.valDecimal = newValue;"
-		},
-		"setSizeValueDecimal": {
-			"description": "Sets the decimal places for measure represented by bubble size.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "integer",
-					"description": "Decimal places of measure for bubble size"
-				}
-			],
-			"body": "this.sizeDecimal = newValue;"
-		},
-		"setColorValueDecimal": {
-			"description": "Sets the decimal places for measure represented by bubble color.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "integer",
-					"description": "Decimal places of measure for bubble color"
-				}
-			],
-			"body": "this.colorDecimal = newValue;"
+			"description": "Returns the gauge value",
+			"body": "return this.label;"
 		}
 	},
 	"events": {
-		"onSelect": {
-			"description": "Called when the user selects/de-selects a bubble."
+		"onClick": {
+			"description": "Called when the user clicks the Colored Box."
 		}
 	}
 }

@@ -13,21 +13,21 @@
 			"kind": "main",
 			"tag": "com-gmail-cse-ari007-d3forcebubble",
 			"url": "https://ajax0.github.io/d3bubble/d3forcebubble.js",
-			"integrity": "sha256-Zi2X53WQa/2Kxo8+iHg+q2yPD7KLc8vkeTYRuXDLilI=",
+			"integrity": "",
 			"ignoreIntegrity": false
 		},
 		{
 			"kind": "styling",
 			"tag": "com-gmail-cse-ari007-d3forcebubble-sps",
 			"url": "https://ajax0.github.io/d3bubble/d3forcebubble_sps.js",
-			"integrity": "sha256-y42oNFXtHoZ9fgIJrhAusLUVvz2545DbJc/RO+J76m8=",
+			"integrity": "",
 			"ignoreIntegrity": false
 		},
 		{
 			"kind": "builder",
 			"tag": "com-gmail-cse-ari007-d3forcebubble-bps",
 			"url": "https://ajax0.github.io/d3bubble/d3forcebubble_bps.js",
-			"integrity": "sha256-84K//09aUNpPZTwhu/bRiEHeFqLmU2lPdXvKnxshan0=",
+			"integrity": "",
 			"ignoreIntegrity": false
 		}
 	],

@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"name": "Scatter Plot",
 	"description": "A ScatterPlot",
-	"newInstancePrefix": "scatterplot",
+	"newInstancePrefix": "scatterPlot",
 	"icon": "https://ajax0.github.io/scatterplot/scatterplot.png",
 	"vendor": "BCX",
 	"eula": "",
@@ -65,7 +65,7 @@
 	},
 	"events": {
 		"onClick": {
-			"description": "Called when the user clicks the Colored Box."
+			"description": "Called when the user clicks the widget."
 		}
 	}
 }

@@ -337,7 +337,7 @@
 			<div id="chart_div"></div>
 		`;
 
-	class GoogleGauge extends HTMLElement {
+	class ScatterPlot extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
@@ -401,5 +401,5 @@
 		}
 	}
 
-	customElements.define("com-bcx-widget-scatterplot", scatterplot);
+	customElements.define("com-bcx-widget-scatterplot", ScatterPlot);
 })();

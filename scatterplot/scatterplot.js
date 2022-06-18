@@ -122,15 +122,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					width: 0.5},
 					opacity: 0.8},
 				type: 'scatter3d'
-			};
-			console.log(trace1)		
+			};	
 			var data = [trace1];
-			var layout = {margin: {
-				l: 0,
-				r: 0,
-				b: 0,
-				t: 0
-				}};
+			var layout = {margin: {l: 0, r: 0, b: 0, t: 0}};
 				
 			Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
 		}

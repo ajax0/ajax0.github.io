@@ -132,7 +132,7 @@ if(t==e.dx){for((r||f>e.dy)&&(f=e.dy);++u<o;)i=n[u],i.x=a,i.y=c,i.dy=f,a+=i.dx=M
 				type: 'scatter3d'
 			};
 					
-			var data = [trace1, trace2];
+			var data = [trace1];
 			var layout = {margin: {
 				l: 0,
 				r: 0,

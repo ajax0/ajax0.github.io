@@ -116,45 +116,30 @@ if(t==e.dx){for((r||f>e.dy)&&(f=e.dy);++u<o;)i=n[u],i.x=a,i.y=c,i.dy=f,a+=i.dx=M
 			
 			console.log("changedProperties = ", changedProperties);
 
-			d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv', function(err, rows){
-				function unpack(rows, key) {
-					return rows.map(function(row)
-					{ return row[key]; });}
-				
-				var trace1 = {
-					x:unpack(rows, 'x1'), y: unpack(rows, 'y1'), z: unpack(rows, 'z1'),
-					mode: 'markers',
-					marker: {
-						size: 12,
-						line: {
-						color: 'rgba(217, 217, 217, 0.14)',
-						width: 0.5},
-						opacity: 0.8},
-					type: 'scatter3d'
-				};
-				
-				var trace2 = {
-					x:unpack(rows, 'x2'), y: unpack(rows, 'y2'), z: unpack(rows, 'z2'),
-					mode: 'markers',
-					marker: {
-						color: 'rgb(127, 127, 127)',
-						size: 12,
-						symbol: 'circle',
-						line: {
-						color: 'rgb(204, 204, 204)',
-						width: 1},
-						opacity: 0.8},
-					type: 'scatter3d'};
-				
-				var data = [trace1, trace2];
-				var layout = {margin: {
-					l: 0,
-					r: 0,
-					b: 0,
-					t: 0
-				  }};
-				Plotly.newPlot('myDiv', data, layout);
-				});
+			var x_data = (-0.585443782182, 1.74147234306, 0.0551660441537, 0.218995819792, 1.56944606413, -0.947713487167, 0.21531704968, 0.283274664607, -1.03433101051, 0.427567525355)
+			var y_data = (-1.57681491722, 1.97829504919, -0.485791255905, -0.471516165045, -0.970200509502, 0.144654488986, -1.15546801186, -0.798790321471, 1.07185451408, -1.69763724423)
+			var z_data = (-0.315321944337, 1.51073967987, -0.179071893477, 2.34244915564, 0.373867515259, 1.74822285426, 0.639409013862, 2.70923555876, -0.68348860724, 1.45698446097)
+			
+			var trace1 = {
+				x: x_data, y: y_data, z: z_data,
+				mode: 'markers',
+				marker: {
+					size: 12,
+					line: {
+					color: 'rgba(217, 217, 217, 0.14)',
+					width: 0.5},
+					opacity: 0.8},
+				type: 'scatter3d'
+			};
+					
+			var data = [trace1, trace2];
+			var layout = {margin: {
+				l: 0,
+				r: 0,
+				b: 0,
+				t: 0
+				}};
+			Plotly.newPlot('myDiv', data, layout);
 		}
 	}
 

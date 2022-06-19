@@ -253,12 +253,12 @@
                             success: function(data) {
                                 console.log(data);
                                 let result = '';
-                                for (let i = 0; i < data['similar products'].length; i++) {
-                                    console.log(data['similar products'][i])
-                                    result = result.concat(data['similar products'][i])
+                                for (let i = 0; i < data['topn'].length; i++) {
+                                    console.log(data['topn'][i])
+                                    result = result.concat(data['topn'][i])
                                 }
                                 console.log(result);
-                                _score = data["similar products"];
+                                _score = data["topn"];
 
                                 that._firePropertiesChanged();
                                 this.settings = {};

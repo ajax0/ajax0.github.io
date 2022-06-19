@@ -34,7 +34,7 @@
 	  "restapiurl": {
 		"type": "string",
 		"description": "The REST API URL",
-		"default": "https://bcx-prod-sim-app.c-07113c9.kyma.ondemand.com/predict?="
+		"default": "https://bcx-prod-sim-001.c-07113c9.kyma.ondemand.com/predict?="
 	  },
 	  "name": {
 		"type": "string",

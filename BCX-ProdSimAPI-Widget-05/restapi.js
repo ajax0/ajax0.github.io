@@ -206,7 +206,7 @@
             console.log("--First Time --");
 
             let div0 = document.createElement('div');
-            div0.innerHTML = '<?xml version="1.0"?><script id="oView_' + widgetName + '" name="oView_' + widgetName + '" type="sapui5/xmlview"><mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" height="100%" controllerName="myView.Template"><l:VerticalLayout class="sapUiContentPadding" width="100%"><l:content><Input id="input"  placeholder="Enter partner number..." liveChange=""/></l:content><Button id="buttonId" class="sapUiSmallMarginBottom" text="Get Similar Products" width="150px" press=".onButtonPress" /></l:VerticalLayout></mvc:View></script>';
+            div0.innerHTML = '<?xml version="1.0"?><script id="oView_' + widgetName + '" name="oView_' + widgetName + '" type="sapui5/xmlview"><mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" height="100%" controllerName="myView.Template"><l:VerticalLayout class="sapUiContentPadding" width="100%"><l:content><Input id="input"  placeholder="Enter product number..." liveChange=""/></l:content><Button id="buttonId" class="sapUiSmallMarginBottom" text="Get Similar Products" width="150px" press=".onButtonPress" /></l:VerticalLayout></mvc:View></script>';
             _shadowRoot.appendChild(div0);
 
             let div1 = document.createElement('div');
@@ -240,8 +240,7 @@
 
                     onButtonPress: function(oEvent) {
 
-                        var product = oView.byId("input").getValue(); //"0004540866"
-                        console.log(product);
+                        var product = oView.byId("input").getValue();
 
                         $.ajax({
                             url: restAPIURL,
@@ -254,10 +253,8 @@
                                 console.log(data);
                                 let result = '';
                                 for (let i = 0; i < data['topn'].length; i++) {
-                                    console.log(data['topn'][i])
                                     result = result.concat(data['topn'][i])
                                 }
-                                console.log(result);
                                 _score = data["topn"];
 
                                 that._firePropertiesChanged();

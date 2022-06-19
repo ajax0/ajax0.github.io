@@ -137,8 +137,6 @@
 
         _renderExportButton() {
             let components = this.metadata ? JSON.parse(this.metadata)["components"] : {};
-            console.log("_renderExportButton-components");
-            console.log(components);
         }
 
         _firePropertiesChanged() {
@@ -200,10 +198,8 @@
         div.slot = "content_" + widgetName;
 
         var restAPIURL = that._export_settings.restapiurl;
-        console.log("restAPIURL: " + restAPIURL);
 
         if (that._firstConnectionUI5 === 0) {
-            console.log("--First Time --");
 
             let div0 = document.createElement('div');
             div0.innerHTML = '<?xml version="1.0"?><script id="oView_' + widgetName + '" name="oView_' + widgetName + '" type="sapui5/xmlview"><mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" height="100%" controllerName="myView.Template"><l:VerticalLayout class="sapUiContentPadding" width="100%"><l:content><Input id="input"  placeholder="Enter product number..." liveChange=""/></l:content><Button id="buttonId" class="sapUiSmallMarginBottom" text="Get Similar Products" width="150px" press=".onButtonPress" /></l:VerticalLayout></mvc:View></script>';
@@ -221,7 +217,6 @@
                 'id': widgetName,
                 'div': mapcanvas_divstr
             });
-            console.log(Ar);
         }
 
         sap.ui.getCore().attachInit(function() {
@@ -276,7 +271,6 @@
                 });
             });
 
-            console.log("widgetName:" + widgetName);
             var foundIndex = Ar.findIndex(x => x.id == widgetName);
             var divfinal = Ar[foundIndex].div;
 

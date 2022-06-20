@@ -190,7 +190,9 @@
             return [
                 "restapiurl",
                 "name",
-                "score"
+                "score",
+                "topn",
+                "coords"
             ];
         }
 
@@ -271,6 +273,8 @@
                                 that._firePropertiesChanged();
                                 this.settings = {};
                                 this.settings.score = "";
+                                this.settings.topn = "";
+                                this.settings.coords = "";
 
                                 that.dispatchEvent(new CustomEvent("onStart", {
                                     detail: {

@@ -102,7 +102,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			var ctx = this.shadowRoot.getElementById('chart_div');
 			var myProps = this._props
 
-			if (myProps != {}) {
+			if (myProps["value"] != "") {
 				const datasetarray = myProps["value"].split(';');		
 				var x_data = datasetarray[0].split(","); 
 				var y_data = datasetarray[1].split(","); 

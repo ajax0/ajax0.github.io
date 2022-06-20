@@ -24,26 +24,26 @@
 			"default": "Label"
 		},
 		"value": {
-			"type": "integer",
+			"type": "string",
 			"description": "value",
-			"default": 10
+			"default": ""
 		}
 	},
 	"methods": {
 		"setValue": {
-			"description": "Sets the gauge value.",
+			"description": "Sets the coordinate values.",
 			"parameters": [
 				{
 					"name": "newValue",
-					"type": "integer",
-					"description": "The new gauge value."
+					"type": "string",
+					"description": "The new coordinate values."
 				}
 			],
 			"body": "this.value = newValue;"
 		},
 		"getValue": {
-			"returnType": "integer",
-			"description": "Returns the gauge value",
+			"returnType": "string",
+			"description": "Returns the coordinate values",
 			"body": "return this.value;"
 		},
 		"setLabel": {

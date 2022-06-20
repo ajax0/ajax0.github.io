@@ -106,8 +106,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 			var myProps = this._props
 			
-			console.log("properties = ", this._props(["value"]["coords"]["x_data"]));
-			
+			console.log("x_coords = ", this._props(["value"]["coords"]["x_coords"]));
+			console.log("y_coords = ", this._props(["value"]["coords"]["y_coords"]));
+			console.log("z_coords = ", this._props(["value"]["coords"]["z_coords"]));
+
 			var x_data = [-0.585443782182, 1.74147234306, 0.0551660441537, 0.218995819792, 1.56944606413, -0.947713487167, 0.21531704968, 0.283274664607, -1.03433101051, 0.427567525355];
 			var y_data = [-1.57681491722, 1.97829504919, -0.485791255905, -0.471516165045, -0.970200509502, 0.144654488986, -1.15546801186, -0.798790321471, 1.07185451408, -1.69763724423];
 			var z_data = [-0.315321944337, 1.51073967987, -0.179071893477, 2.34244915564, 0.373867515259, 1.74822285426, 0.639409013862, 2.70923555876, -0.68348860724, 1.45698446097];

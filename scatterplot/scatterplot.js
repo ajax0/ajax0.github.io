@@ -126,7 +126,6 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var data = [trace1];
 				var layout = { 
 							scene: {
-								camera: {eye: {x: 2.1, y: 0.1, z: 0.9}},
 								xaxis: {title: ""},
 								yaxis: {title: ""},
 								zaxis: {title: ""},
@@ -136,7 +135,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									z: ann_z,
 									text: "Selected Product",
 									ax: 0,
-									ay: -50,
+									ay: 0,
 									arrowcolor: "black",
 									arrowsize: 2,
 									arrowwidth: 1,

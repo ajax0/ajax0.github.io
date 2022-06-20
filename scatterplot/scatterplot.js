@@ -130,9 +130,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 								yaxis: {title: ""},
 								zaxis: {title: ""},
 								annotations: [{
-									x: ann_x,
-									y: ann_y,
-									z: ann_z,
+									x: 0, //ann_x,
+									y: 0, //ann_y,
+									z: 0, //ann_z,
 									text: "Selected Product",
 									ax: 0,
 									ay: 0,

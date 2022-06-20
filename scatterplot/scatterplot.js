@@ -101,7 +101,6 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			this._props = { ...this._props, ...changedProperties };
 			var ctx = this.shadowRoot.getElementById('chart_div');
 			var myProps = this._props
-			console.log("myProps = ", myProps);
 			if ((myProps["value"] != "") && (myProps["value"] != "10")) {
 				const datasetarray = myProps["value"].split(';');		
 				var x_data = datasetarray[0].split(","); 
@@ -158,7 +157,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									opacity: 0.8
 								}]
 							}
-						}
+						};
 					
 				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
 			};

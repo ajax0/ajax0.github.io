@@ -145,13 +145,18 @@
 
         _firePropertiesChanged() {
             this.score = "";
+            this.topn = "";
+            this.coords = "";
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        score: this.score
+                        score: this.score,
+                        topn: this.topn,
+                        coords: this.coords
                     }
                 }
             }));
+        
         }
 
         // SETTINGS

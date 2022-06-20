@@ -32,6 +32,8 @@
             this._export_settings = {};
             this._export_settings.restapiurl = "";
             this._export_settings.score = "";
+            this._export_settings.topn = "";
+            this._export_settings.coords = "";
             this._export_settings.name = "";
 
             this.addEventListener("click", event => {
@@ -170,6 +172,15 @@
         get score() {
             return this._export_settings.score;
         }
+        
+        get topn() {
+            return this._export_settings.topn;
+        }
+        
+        get coords() {
+            return this._export_settings.coords;
+        }
+
         set score(value) {
             value = _score;
             this._export_settings.score = value;

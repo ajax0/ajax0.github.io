@@ -106,8 +106,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 			var myProps = this._props
 			console.log("this._props = ", this._props);
-			console.log(myProps(["value"]));
-			const datasetarray = myProps(["value"]).split(';');
+			console.log(myProps["value"]);
+			const datasetarray = myProps["value"].split(';');
 			console.log("datasetarray[0]:", datasetarray[0]);
 
 			var x_data = datasetarray[0];

@@ -113,6 +113,17 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var ann_z = z_data[0];
 
 				var trace1 = {
+					x: x_data[0], y: y_data[0], z: z_data[0],
+					mode: 'markers',
+					marker: {
+						size: 12,
+						line: {
+						color: 'rgba(217, 239, 239, 0.14)',
+						width: 0.5},
+						opacity: 0.8},
+					type: 'scatter3d'
+				};	
+				var trace2 = {
 					x: x_data, y: y_data, z: z_data,
 					mode: 'markers',
 					marker: {

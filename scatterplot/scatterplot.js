@@ -136,6 +136,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				};	
 				var data = [trace1, trace2];
 				var layout = { 
+							hovermode: 'closest',
 							showlegend: true,
 							legend: {x: 1, xanchor: 'right', y: 1},
 							scene: {

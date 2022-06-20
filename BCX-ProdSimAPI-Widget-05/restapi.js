@@ -2,6 +2,8 @@
     let _shadowRoot;
     let _id;
     let _score;
+    let _topn;
+    let _coords;
 
     let div;
     let Ar = [];
@@ -251,7 +253,10 @@
                                     result = result.concat(data['topn'][i])
                                 }
                                 _score = data["topn"];
-
+                                _topn =  data["topn"];
+                                let concatcoords = '';
+                                _coords = concatcoords.concat("[coords:", data["x_coords"], data["y_coords"], data["z_coords"], "]");
+                                console.log(_coords);
                                 that._firePropertiesChanged();
                                 this.settings = {};
                                 this.settings.score = "";

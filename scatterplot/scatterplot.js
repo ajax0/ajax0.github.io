@@ -101,27 +101,28 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			this._props = { ...this._props, ...changedProperties };
 			var ctx = this.shadowRoot.getElementById('chart_div');
 			var myProps = this._props
-			const datasetarray = myProps["value"].split(';');
-			
-			var x_data = datasetarray[0].split(","); 
-			var y_data = datasetarray[1].split(","); 
-			var z_data = datasetarray[2].split(","); 
-			
-			var trace1 = {
-				x: x_data, y: y_data, z: z_data,
-				mode: 'markers',
-				marker: {
-					size: 12,
-					line: {
-					color: 'rgba(217, 217, 217, 0.14)',
-					width: 0.5},
-					opacity: 0.8},
-				type: 'scatter3d'
-			};	
-			var data = [trace1];
-			var layout = {margin: {l: 0, r: 0, b: 0, t: 0}};
+			if (myProps) {
+				const datasetarray = myProps["value"].split(';');		
+				var x_data = datasetarray[0].split(","); 
+				var y_data = datasetarray[1].split(","); 
+				var z_data = datasetarray[2].split(","); 
 				
-			Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
+				var trace1 = {
+					x: x_data, y: y_data, z: z_data,
+					mode: 'markers',
+					marker: {
+						size: 12,
+						line: {
+						color: 'rgba(217, 217, 217, 0.14)',
+						width: 0.5},
+						opacity: 0.8},
+					type: 'scatter3d'
+				};	
+				var data = [trace1];
+				var layout = {margin: {l: 0, r: 0, b: 0, t: 0}};
+					
+				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
+			};
 		}
 	}
 

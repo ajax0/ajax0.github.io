@@ -127,9 +127,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var layout = { 
 								margin: {l: 0, r: 0, b: 0, t: 0},
 								annotations: [{
-									x: 0,
-									y: 0,
-									z: 0,
+									x: ann_x,
+									y: ann_y,
+									z: ann_z,
 									text: "Selected Product",
 									ax: 0,
 									ay: -50,
@@ -139,10 +139,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									arrowhead: 2,
 									bgcolor:'#ffffff',
 									opacity: 0.8
-								}],
+								}]
 				};
 					
-				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
+				Plotly.newPlot(ctx, data, layout, {displayModeBar: true});
 			};
 		}
 	}

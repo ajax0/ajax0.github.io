@@ -280,7 +280,7 @@
                                 _score = data["topn"];
                                 _topn =  data["topn"];
                                 let concatcoords = '';
-                                _coords = concatcoords.concat("[coords: [x_coords:[", data["x_coords"], "], y_coords:[", data["y_coords"], "], z_coords:[", data["z_coords"], "]]]");
+                                _coords = concatcoords.concat("x_coords:[", data["x_coords"], "], y_coords:[", data["y_coords"], "], z_coords:[", data["z_coords"], "]");
                                 console.log(_coords);
                                 that._firePropertiesChanged();
                                 this.settings = {};

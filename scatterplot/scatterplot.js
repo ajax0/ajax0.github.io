@@ -134,7 +134,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						opacity: 0.8},
 					type: 'scatter3d'
 				};	
-				var data = [trace1];
+				var data = [trace1, trace2];
 				var layout = { 
 							scene: {
 								xaxis: {title: ""},

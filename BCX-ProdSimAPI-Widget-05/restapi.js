@@ -177,18 +177,25 @@
         get score() {
             return this._export_settings.score;
         }
-        
-        get topn() {
-            return this._export_settings.topn;
-        }
-        
-        get coords() {
-            return this._export_settings.coords;
-        }
-
         set score(value) {
             value = _score;
             this._export_settings.score = value;
+        }
+
+        get topn() {
+            return this._export_settings.topn;
+        }
+        set topn(value) {
+            value = _topn;
+            this._export_settings.topn = value;
+        }
+
+        get coords() {
+            return this._export_settings.coords;
+        }
+        set coords(value) {
+            value = _coords;
+            this._export_settings.coords = value;
         }
 
         static get observedAttributes() {

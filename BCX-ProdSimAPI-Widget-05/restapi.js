@@ -280,8 +280,10 @@
                                 _score = data["topn"];
                                 _topn =  data["topn"];
                                 let concatcoords = '';
-                                _coords = concatcoords.concat("x_coords:[", data["x_coords"], "], y_coords:[", data["y_coords"], "], z_coords:[", data["z_coords"], "]");
+                                _coords = concatcoords.concat(data["x_coords"], "," , data["y_coords"], "," , data["z_coords"]);
                                 console.log(_coords);
+                                const datasetarray = str.split(',');
+                                console.log("x_set = ", datasetarray[0]);
                                 that._firePropertiesChanged();
                                 this.settings = {};
                                 this.settings.score = "";

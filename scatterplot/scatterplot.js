@@ -108,6 +108,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var y_data = datasetarray[1].split(","); 
 				var z_data = datasetarray[2].split(","); 
 				
+				var ann_x = x_data[0];
+				var ann_y = y_data[0];
+				var ann_z = z_data[0];
+
 				var trace1 = {
 					x: x_data, y: y_data, z: z_data,
 					mode: 'markers',
@@ -120,7 +124,28 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					type: 'scatter3d'
 				};	
 				var data = [trace1];
-				var layout = {margin: {l: 0, r: 0, b: 0, t: 0}};
+				var layout = { 
+								margin: {l: 0, r: 0, b: 0, t: 0},
+								annotations: {
+									x = ann_x,
+									y = ann_y,
+									z = ann_z,
+									text = "Selected Product",
+									textangle = 0,
+									ax = 0,
+									ay = -50,
+									font = dict(
+										color = "black",
+										size = 12
+										),
+									arrowcolor = "black",
+									arrowsize = 2,
+									arrowwidth = 1,
+									arrowhead = 2,
+									bgcolor='#ffffff',
+									opacity=0.8
+								},
+				};
 					
 				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
 			};

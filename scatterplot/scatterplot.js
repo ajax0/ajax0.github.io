@@ -144,7 +144,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									opacity: 0.8
 								}]
 							}
-						};
+						}
 					
 				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
 			};

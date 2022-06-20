@@ -108,7 +108,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			
 			console.log(myProps(["value"]));
 			const datasetarray = myProps(["value"]).split(';');
-
+			console.log("datasetarray[0]:", datasetarray[0]);
+			
 			var x_data = datasetarray[0];
 			var y_data = datasetarray[1];
 			var z_data = datasetarray[2];

@@ -125,7 +125,11 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				};	
 				var data = [trace1];
 				var layout = { 
-								margin: {l: 0, r: 0, b: 0, t: 0},
+							scene: {
+								camera: {eye: {x: 2.1, y: 0.1, z: 0.9}},
+								xaxis: {title: ""},
+								yaxis: {title: ""},
+								zaxis: {title: ""},
 								annotations: [{
 									x: ann_x,
 									y: ann_y,
@@ -140,9 +144,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									bgcolor:'#ffffff',
 									opacity: 0.8
 								}]
-				};
+							}
+						};
 					
-				Plotly.newPlot(ctx, data, layout, {displayModeBar: true});
+				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
 			};
 		}
 	}

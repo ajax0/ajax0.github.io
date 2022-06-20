@@ -127,9 +127,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var layout = { 
 								margin: {l: 0, r: 0, b: 0, t: 0},
 								annotations: [{
-									x: ann_x,
-									y: ann_y,
-									z: ann_z,
+									x: 0,
+									y: 0,
+									z: 0,
 									text: "Selected Product",
 									ax: 0,
 									ay: -50,

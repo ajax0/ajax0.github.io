@@ -45,14 +45,23 @@
 		"type": "string",
 		"description": "score",
 		"default": ""
+	  },
+	  "topn": {
+		"type": "string",
+		"description": "topn",
+		"default": ""
+	  },
+	  "coords": {
+		"type": "string",
+		"description": "coords",
+		"default": ""
 	  }
 	},
 	"methods": {
 	  "getRestAPIUrl": {
 		"returnType": "string",
 		"description": "Get the REST API URL",
-		"parameters": [      
-		],
+		"parameters": [],
 		"body": "return this.restapiurl;"
 	  },
 	  "setRestAPIUrl": {
@@ -69,10 +78,23 @@
 	  "getScore": {
 		"returnType": "string",
 		"description": "Get the score",
-		"parameters": [
-		],
+		"parameters": [],
 		"body": "return this.score;"
 	  },
+	  "getTopn": {
+		"returnType": "string",
+		"description": "Get the TopN",
+		"parameters": [],
+		"body": "return this.topn;"
+	  },
+	  
+	  "getCoords": {
+		"returnType": "string",
+		"description": "Get the x, y, z coordinates",
+		"parameters": [],
+		"body": "return this.coords;"
+	  },
+
 	  "setScore": {
 		"description": "Set the score",
 		"parameters": [
@@ -87,9 +109,7 @@
 	  "getName": {
 		"returnType": "string",
 		"description": "Get widget name",
-		"parameters": [
-		  
-		],
+		"parameters": [],
 		"body": "return this.name;"
 	  },
 	  "setName": {

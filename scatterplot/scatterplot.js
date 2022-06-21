@@ -67,7 +67,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 //Plotly END
 
 	let template = document.createElement("template");
-	template.innerHTML = `<style>:host {display: inline;}</style><div id="chart_div"></div>`;
+	template.innerHTML = `<div id="chart_div"></div>`;
 
 	class ScatterPlot extends HTMLElement {
 		static get template () {
@@ -93,10 +93,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			script.setAttribute("src", "https://cdn.plot.ly/plotly-latest.min.js");
 			document.children[0].prepend(script);
 			this.plotlyDiv = document.createElement("div");
-			this.shadowRoot.getElementById('plotly-div-container').appendChild(this.plotlyDiv);
-
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
+			shadowRoot.getElementById('chart_div').appendChild(this.plotlyDiv);
+			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
 				this.dispatchEvent(event);

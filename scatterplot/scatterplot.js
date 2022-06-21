@@ -71,7 +71,13 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 	class ScatterPlot extends HTMLElement {
 		constructor() {
-			super(); 
+			super();
+			var script = document.createElement("script");
+			script.setAttribute("src", "https://cdn.plot.ly/plotly-latest.min.js");
+			document.children[0].prepend(script);
+			this.plotlyDiv = document.createElement("div");
+			document.hackyRootElement.appendChild(this.plotlyDiv);
+
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.addEventListener("click", event => {

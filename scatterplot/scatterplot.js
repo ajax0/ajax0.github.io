@@ -70,6 +70,23 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 	template.innerHTML = `<style>:host {display: inline;}</style><div id="chart_div"></div>`;
 
 	class ScatterPlot extends HTMLElement {
+		static get template () {
+			// Template getter must return an instance of HTMLTemplateElement.
+			// The html helper function makes this easy.
+			return html`
+				<style>
+					#plotly-div-container {
+						height: 400px;
+						width: 400px;
+					}
+				</style>
+				<button id="button" on-click="loadGraph">Load Graph</button>
+				<div id="plotly-div-container">
+					<slot></slot>
+				</div>
+			`;
+			}
+		
 		constructor() {
 			super();
 			var script = document.createElement("script");

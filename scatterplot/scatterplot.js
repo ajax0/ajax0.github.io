@@ -67,7 +67,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 //Plotly END
 
 	let template = document.createElement("template");
-	template.innerHTML = `<div id="chart_div"></div>`;
+	template.innerHTML = `<style>:host {display: block;}</style><div id="chart_div"></div>`;
 
 	class ScatterPlot extends HTMLElement {
 		constructor() {

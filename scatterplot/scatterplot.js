@@ -93,7 +93,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			script.setAttribute("src", "https://cdn.plot.ly/plotly-latest.min.js");
 			document.children[0].prepend(script);
 			this.plotlyDiv = document.createElement("div");
-			document.hackyRootElement.appendChild(this.plotlyDiv);
+			this.shadowRoot.getElementById('plotly-div-container').appendChild(this.plotlyDiv);
 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));

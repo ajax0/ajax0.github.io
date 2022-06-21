@@ -98,8 +98,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 		onCustomWidgetAfterUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
-			var ctx = this.shadowRoot.getElementById('chart_div');
-			var myProps = this._props
+			//var ctx = this.shadowRoot.getElementById('chart_div');
+			var ctx = this.plotlyDiv;
+			var myProps = this._props;
 			if ((myProps["value"] != "") && (myProps["value"] != "10")) {
 				const datasetarray = myProps["value"].split(';');		
 				var x_data = datasetarray[0].split(","); 
@@ -158,7 +159,11 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 							}
 						};
 					
-				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
+//				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
+				Plotly.newPlot(ctx, data, layout, {displayModeBar: false}).then(function(plotlyDiv) {
+					plotlyDiv.on('plotly_click', clickCallback); 
+					return self;
+				});
 			};
 		}
 	}

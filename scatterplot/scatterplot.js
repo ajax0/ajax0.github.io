@@ -105,7 +105,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var ann_z = z_data[0];
 
 				var trace1 = {
-					x: x_data[0], y: y_data[0], z: z_data[0],
+					x: x_data, y: y_data, z: z_data,
 					mode: 'markers',
 					marker: {
 						size: 12,
@@ -116,7 +116,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					type: 'scatter3d'
 				};	
 				var trace2 = {
-					x: x_data, y: y_data, z: z_data,
+					x: 0.01, y: 0.01, z: 0.01,
 					mode: 'markers',
 					marker: {
 						size: 12,
@@ -141,7 +141,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									z: 0, //ann_z,
 									text: "Selected Product",
 									ax: 0,
-									ay: 0,
+									ay: -50,
 									arrowcolor: "black",
 									arrowsize: 2,
 									arrowwidth: 1,

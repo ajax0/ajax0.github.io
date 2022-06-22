@@ -390,11 +390,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			this._props = { ...this._props, ...changedProperties };
 			var ctx = this.shadowRoot.getElementById('chart_div');
 			var myProps = this._props			
-			if (myProps["label"] != "") {
+			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;
-				console.log("arraywidth = ", arrayWidth);
-				console.log("labelarray = ", labelarray);
+
 				const rows = labelarray.length;
 				const cols = labelarray[0].length;
 				let grid = [];
@@ -407,8 +406,6 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						grid[col][row] = labelarray[row][col];
 					};
 				};
-			
-				console.log(grid)
 
 				var data = [{
 					type: 'table',

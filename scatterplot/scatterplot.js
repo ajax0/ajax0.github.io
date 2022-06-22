@@ -410,7 +410,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					type: 'scatter3d'
 				};	
 				var trace2 = {
-					x: 0.01, y: 0.01, z: 0.01,
+					x: ann_x, y: ann_y, z: ann_z,
 					mode: 'markers',
 					marker: {
 						size: 12,
@@ -446,7 +446,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 							}
 						};
 					
-				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});
+				Plotly.newPlot(ctx, data, layout, {displayModeBar: true});
 			};
 		}
 	}

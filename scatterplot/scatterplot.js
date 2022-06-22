@@ -452,7 +452,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 							}
 						};
 					
-				Plotly.newPlot(ctx, data, layout, {displayModeBar: true});
+				Plotly.newPlot(ctx, data, layout, {responsive: true, displayModeBar: true, displaylogo: false});
 			};
 		}
 	}

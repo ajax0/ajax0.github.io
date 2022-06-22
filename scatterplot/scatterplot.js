@@ -451,8 +451,14 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 								}]
 							}
 						};
+				
+				var config = {
+					responsive: true, 
+					displayModeBar: true, 
+					displaylogo: false
+				};
 					
-				Plotly.newPlot(ctx, data, layout, {responsive: true, displayModeBar: true, displaylogo: false});
+				Plotly.newPlot(ctx, data, layout, config);
 			};
 		}
 	}

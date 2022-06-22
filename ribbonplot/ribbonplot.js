@@ -363,7 +363,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			
 			<div id="chart_div"></div>`;
 
-	class RibbonPlot extends HTMLElement {
+	class Surface extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
@@ -464,5 +464,5 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 		}
 	}
 
-	customElements.define("com-bcx-widget-ribbonplot", RibbonPlot);
+	customElements.define("com-bcx-widget-ribbonplot", Surface);
 })();

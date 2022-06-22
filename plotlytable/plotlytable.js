@@ -425,7 +425,11 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					},
 					}];
 
-				Plotly.newPlot(ctx, data);
+				var layout = {
+					height: "500px",
+					}
+
+				Plotly.newPlot(ctx, data, layout);
 			};
 		}
 	}

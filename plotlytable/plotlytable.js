@@ -392,7 +392,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			var myProps = this._props			
 			if (myProps["label"] != "") {
 				var selProdDesc = myProps["label"][0][1];
-				var size = 3; 
+				var size = 6; 
 				var valuesarray = [];
 				var labelarray = myProps["label"].split(",");
 				for (var i=0; i<labelarray.length; i+=size) {
@@ -404,8 +404,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var data = [{
 					type: 'table',
 					header: {
-						values: [["<b>Product ID</b>"], ["<b>Description</b>"],
-						["<b>Similarity</b>"]],
+						values: [["<b>Product ID</b>"], ["<b>Description</b>"],	["<b>Similarity</b>"]],
 						align: "center",
 						line: {width: 1, color: 'black'},
 						fill: {color: "grey"},

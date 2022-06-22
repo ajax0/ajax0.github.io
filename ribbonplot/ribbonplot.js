@@ -363,7 +363,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			
 			<div id="chart_div"></div>`;
 
-	class ScatterPlot extends HTMLElement {
+	class RibbonPlot extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});

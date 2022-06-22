@@ -426,14 +426,13 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var selProdDesc = "Selected Product";
 				
 				if (myProps["label"] != "") {
-					console.log(myProps["label"]);
 					var selProdDesc = myProps["label"][0][1];
 				};
 
 				var layout = { 
 							hovermode: 'closest',
 							showlegend: false,
-							legend: {x: 1, xanchor: 'right', y: 1},
+							height: "800",
 							scene: {
 								xaxis: {title: ""},
 								yaxis: {title: ""},
@@ -452,7 +451,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									bgcolor:'#ffffff',
 									opacity: 0.8
 								}]
-							}
+							},
 						};
 				
 				var config = {

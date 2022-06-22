@@ -391,16 +391,21 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			var ctx = this.shadowRoot.getElementById('chart_div');
 			var myProps = this._props			
 			if (myProps["label"] != "") {
-				var selProdDesc = myProps["label"][0][1];
-				var size = 3; 
-				var valuesarray = [];
 				var labelarray = myProps["label"];
+				var arrayLength = 3;
 				console.log("labelarray = ", labelarray);
-				for (var i=0; i<labelarray.length; i+=size) {
-						valuesarray.push(labelarray.slice(i,i+size));
+				var newArray = [];
+				for(var i = 0; i < labelarray.length; i++){
+					newArray.push([]);
+				};
+
+				for(var i = 0; i < labelarray.length; i++){
+					for(var j = 0; j < arrayLength; j++){
+						newArray[j].push(array[i][j]);
+					};
 				};
 				
-				console.log(valuesarray);
+				console.log(newArray)
 
 				var data = [{
 					type: 'table',
@@ -412,7 +417,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						font: {family: "Arial", size: 12, color: "white"}
 					},
 					cells: {
-						values: labelarray,
+						values: newArray,
 						align: "center",
 						line: {color: "black", width: 1},
 						font: {family: "Arial", size: 11, color: ["black"]}

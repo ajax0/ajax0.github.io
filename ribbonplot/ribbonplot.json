@@ -1,0 +1,71 @@
+{
+	"id": "com.bcx.widget.ribbonplot",
+	"version": "0.0.1",
+	"name": "Ribbon Plot",
+	"description": "A Ribbon Plot",
+	"newInstancePrefix": "ribbonplot",
+	"icon": "https://ajax0.github.io/ribbonplot/ribbonplot.png",
+	"vendor": "BCX",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-bcx-widget-ribbonplot",
+			"url": "https://ajax0.github.io/ribbonplot/ribbonplot.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"label": {
+			"type": "string",
+			"description": "label",
+			"default": "Label"
+		},
+		"value": {
+			"type": "string",
+			"description": "value",
+			"default": ""
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the coordinate values.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string",
+					"description": "The new coordinate values."
+				}
+			],
+			"body": "this.value = newValue;"
+		},
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the coordinate values",
+			"body": "return this.value;"
+		},
+		"setLabel": {
+			"description": "Sets the label value.",
+			"parameters": [
+				{
+					"name": "newLabel",
+					"type": "string",
+					"description": "The new label value."
+				}
+			],
+			"body": "this.label = newLabel;"
+		},
+		"getLabel": {
+			"returnType": "string",
+			"description": "Returns the gauge value",
+			"body": "return this.label;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the widget."
+		}
+	}
+}

@@ -70,6 +70,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 	template.innerHTML = `<style>
 				:host {
 					display: block;
+					width: 100%;
+					height:100%;
 				}
 
 				.js-plotly-plot .plotly, .js-plotly-plot .plotly div {

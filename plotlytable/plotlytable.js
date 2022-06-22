@@ -392,19 +392,23 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			var myProps = this._props			
 			if (myProps["label"] != "") {
 				var labelarray = myProps["label"];
-				var arrayLength = 3;
+				var arrayWidth = labelarray[0].length;
+				console.log("arraywidth = ", arrayWidth);
 				console.log("labelarray = ", labelarray);
-				var newArray = [];
+				const rows = labelarray.length;
+				const cols = labelarray[0].length;
+				let grid = [];
 
-				for(var i = 0; i < labelarray.length; i++){
-					var ar = [];
-					for(var j = 0; j < labelarray[i].length; j++){
-						ar.push(labelarray[i][j]);
-					};
-					newArray.push(ar);
+				for(let col = 0; col < cols; col++) {
+					grid[col] = [];
 				};
-				
-				console.log(newArray)
+				for(let row = 0; row < rows; row++){
+					for (let col = 0; col <cols; col++) {
+						grid[col][row] = labelarray[row][col];
+					};
+				};
+			
+				console.log(grid)
 
 				var data = [{
 					type: 'table',
@@ -416,7 +420,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						font: {family: "Arial", size: 12, color: "white"}
 					},
 					cells: {
-						values: newArray,
+						values: grid,
 						align: "center",
 						line: {color: "black", width: 1},
 						font: {family: "Arial", size: 11, color: ["black"]}

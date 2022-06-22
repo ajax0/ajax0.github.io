@@ -399,7 +399,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				for(var i = 0; i < labelarray.length; i++){
 					var ar = [];
 					for(var j = 0; j < labelarray[i].length; j++){
-						ar.push(labelarray[j][i]);
+						ar.push(labelarray[i][j]);
 					};
 					newArray.push(ar);
 				};

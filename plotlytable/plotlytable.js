@@ -397,10 +397,11 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var newArray = [];
 
 				for(var i = 0; i < labelarray.length; i++){
-					newArray.push([]);
+					var ar = [];
 					for(var j = 0; j < labelarray[i].length; j++){
-						newArray[j].push(labelarray[i][j]);
+						ar.push(labelarray[j][i]);
 					};
+					newArray.push(ar);
 				};
 				
 				console.log(newArray)

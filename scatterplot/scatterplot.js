@@ -393,7 +393,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var x_data = datasetarray[0].split(","); 
 				var y_data = datasetarray[1].split(","); 
 				var z_data = datasetarray[2].split(","); 
-				console.log("x_data:", x_data);
+	
 				var ann_x = x_data[0];
 				var ann_y = y_data[0];
 				var ann_z = z_data[0];
@@ -421,6 +421,12 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					type: 'scatter3d'
 				};	
 				var data = [trace1, trace2];
+
+				if (myProps["label"] != "") {
+					console.log(myProps["label"]);
+					var selProd = myProps["label"];
+				};
+
 				var layout = { 
 							hovermode: 'closest',
 							showlegend: true,

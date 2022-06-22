@@ -392,7 +392,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			var myProps = this._props			
 			if (myProps["label"] != "") {
 				var selProdDesc = myProps["label"][0][1];
-				var size = 6; 
+				var size = 3; 
 				var valuesarray = [];
 				var labelarray = myProps["label"];
 				console.log("labelarray = ", labelarray);
@@ -412,7 +412,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						font: {family: "Arial", size: 12, color: "white"}
 					},
 					cells: {
-						values: valuesarray,
+						values: labelarray,
 						align: "center",
 						line: {color: "black", width: 1},
 						font: {family: "Arial", size: 11, color: ["black"]}

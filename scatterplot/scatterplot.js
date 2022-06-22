@@ -421,15 +421,16 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					type: 'scatter3d'
 				};	
 				var data = [trace1, trace2];
-
+				var selProdDesc = "Selected Product";
+				
 				if (myProps["label"] != "") {
 					console.log(myProps["label"]);
-					var selProd = myProps["label"];
+					var selProdDesc = myProps["label"][0][1];
 				};
 
 				var layout = { 
 							hovermode: 'closest',
-							showlegend: true,
+							showlegend: false,
 							legend: {x: 1, xanchor: 'right', y: 1},
 							scene: {
 								xaxis: {title: ""},
@@ -439,7 +440,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									x: ann_x,
 									y: ann_y,
 									z: ann_z,
-									text: "Selected Product",
+									text: selProdDesc,
 									ax: 0,
 									ay: -50,
 									arrowcolor: "black",

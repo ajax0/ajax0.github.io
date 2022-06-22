@@ -399,9 +399,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						valuesarray.push(labelarray.slice(i,i+size));
 				};
 				
-				console.log(labelsarray);
+				console.log(valuesarray);
 
-				var values = myProps["label"].split(",")
 				var data = [{
 					type: 'table',
 					header: {

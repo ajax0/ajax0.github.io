@@ -389,7 +389,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 		onCustomWidgetAfterUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 			var ctx = this.shadowRoot.getElementById('chart_div');
-			var myProps = this._props			
+			var myProps = this._props
+			console.log("(myProps[label] = ", (myProps["label"]);			
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;

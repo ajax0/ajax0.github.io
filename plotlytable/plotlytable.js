@@ -395,6 +395,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var size = 6; 
 				var valuesarray = [];
 				var labelarray = myProps["label"].split(",");
+				console.log("labelarray = ", labelarray);
 				for (var i=0; i<labelarray.length; i+=size) {
 						valuesarray.push(labelarray.slice(i,i+size));
 				};

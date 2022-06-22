@@ -395,12 +395,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var arrayLength = 3;
 				console.log("labelarray = ", labelarray);
 				var newArray = [];
-				for(var i = 0; i < labelarray.length; i++){
-					newArray.push([]);
-				};
 
 				for(var i = 0; i < labelarray.length; i++){
-					for(var j = 0; j < arrayLength; j++){
+					newArray.push([]);
+					for(var j = 0; j < labelarray[i].length; j++){
 						newArray[j].push(labelarray[i][j]);
 					};
 				};

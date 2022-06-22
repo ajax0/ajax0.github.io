@@ -401,7 +401,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 				for(var i = 0; i < labelarray.length; i++){
 					for(var j = 0; j < arrayLength; j++){
-						newArray[j].push(array[i][j]);
+						newArray[j].push(labelarray[i][j]);
 					};
 				};
 				

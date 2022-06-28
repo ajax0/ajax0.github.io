@@ -405,7 +405,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				for(let row = 0; row < rows; row++){
 					for (let col = 0; col <cols; col++) {
 						if (col = cols-1) {
-							console.log(labelarray[row][col])
+							console.log(labelarray[row][col] * 100)
 						};
 						grid[col][row] = labelarray[row][col];
 					};

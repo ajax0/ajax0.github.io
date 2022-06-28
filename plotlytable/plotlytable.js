@@ -390,7 +390,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			this._props = { ...this._props, ...changedProperties };
 			var ctx = this.shadowRoot.getElementById('chart_div');
 			var myProps = this._props
-			console.log("(myProps[label] = ", myProps["label"]);			
+			
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;
@@ -404,6 +404,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				};
 				for(let row = 0; row < rows; row++){
 					for (let col = 0; col <cols; col++) {
+						if (col = cols-1) {
+							console.log(labelarray[row][col])
+						};
 						grid[col][row] = labelarray[row][col];
 					};
 				};
@@ -427,8 +430,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 				var layout = {
 					height: "750",
-					width: "450",
-					margin: {l: 20, r: 0, b: 0, t: 0, pad: 4}
+					width: "500",
+					margin: {l: 20, r: 0, b: 0, t: 0}
 					}
 
 				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});

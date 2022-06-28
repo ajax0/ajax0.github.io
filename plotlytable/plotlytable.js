@@ -427,13 +427,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 				var layout = {
 					height: "1000",
-					margin: {
-						l: 60,
-						r: 10,
-						b: 0,
-						t: 10,
-						pad: 4
-					  }
+					margin: {l: 0, r: 0, b: 0, t: 0, pad: 4}
 					}
 
 				Plotly.newPlot(ctx, data, layout, {displayModeBar: false});

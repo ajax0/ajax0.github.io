@@ -433,6 +433,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 							hovermode: 'closest',
 							showlegend: false,
 							height: "800",
+							margin: {l: 20, r: 0, b: 0, t: 0},
 							scene: {
 								xaxis: {title: ""},
 								yaxis: {title: ""},

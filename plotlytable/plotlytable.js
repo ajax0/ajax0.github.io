@@ -406,9 +406,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					for (let col = 0; col <cols; col++) {
 						let cell_value = labelarray[row][col]; 
 						grid[col][row] = cell_value;
-						if (col = cols-1) {
-							console.log((cell_value * 100).toFixed(4));
-						};
+//						if (col = cols-1) {
+//							console.log((cell_value * 100));
+//						};
 					};
 				};
 

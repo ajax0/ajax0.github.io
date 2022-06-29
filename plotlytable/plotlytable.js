@@ -416,14 +416,14 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					type: 'table',
 					header: {
 						values: [["<b>Product ID</b>"], ["<b>Description</b>"],	["<b>Similarity</b>"]],
-						align: ["center", "left"],
+						align: ["center", "left", "left"],
 						line: {width: 1, color: 'black'},
 						fill: {color: "grey"},
 						font: {family: "Arial", size: 12, color: "white"}
 					},
 					cells: {
 						values: grid,
-						align: ["center", "left"],
+						align: ["center", "left", "left"],
 						line: {color: "black", width: 1},
 						font: {family: "Arial", size: 11, color: ["black"]}
 					},

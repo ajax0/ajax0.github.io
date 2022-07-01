@@ -407,7 +407,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						let cell_value = labelarray[row][col]; 
 						grid[col][row] = cell_value;
 						if (col = cols-1) {
-							console.log((typeof cell_value));
+							console.log((parseFloat(cell_value) * 100));
 						};
 					};
 				};

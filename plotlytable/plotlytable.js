@@ -405,10 +405,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				for(let row = 0; row < rows; row++){
 					for (let col = 0; col <cols; col++) {
 						let cell_value = labelarray[row][col]; 
-						grid[col][row] = cell_value;
+						grid[col][row] = labelarray[row][col];
 						if (col = cols) {
-							console.log(cell_value, col);
-							console.log((parseFloat(cell_value) * 100));
+							console.log(clabelarray[row][col], row, col);
+							console.log((parseFloat(labelarray[row][col]) * 100));
 						};
 					};
 				};

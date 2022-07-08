@@ -395,14 +395,20 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;
 				console.log("labelarray", labelarray);
-				for (const row of labelarray){
-					console.log("row:", row);
-					console.log("row type:", typeof(row));
+				labelarray.forEach(function(row, index) {
 					var simscore = row[2];
 					var pct = parseFloat(simscore);
 					pct = pct * 100;
 					console.log("pct:", pct);
-				}
+					this[index] = pct;
+				  }, labelarray); 
+
+//				for (const row of labelarray){
+//					var simscore = row[2];
+//					var pct = parseFloat(simscore);
+//					pct = pct * 100;
+//					console.log("pct:", pct);
+//				};
 				
 				const rows = labelarray.length;
 				const cols = labelarray[0].length;

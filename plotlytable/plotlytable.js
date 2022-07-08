@@ -400,6 +400,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					console.log("row type:", typeof(row));
 					var simscore = row[2];
 					var pct = parseFloat(simscore);
+					pct = pct * 100;
 					console.log("pct:", pct);
 				}
 				

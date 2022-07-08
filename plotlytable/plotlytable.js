@@ -398,7 +398,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				labelarray.forEach(function(row, index) {
 					var simscore = row[2];
 					var pct = parseFloat(simscore);
-					pct = pct * 100;
+					pct = (pct * 100).round(3);
 					console.log("pct:", pct);
 					var newrow = [row[0], row[1], pct]
 					this[index] = newrow;

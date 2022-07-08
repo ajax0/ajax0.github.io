@@ -394,11 +394,11 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;
-				console.log("labelarray1", labelarray);
+//				console.log("labelarray1", labelarray);
 				labelarray.forEach(function(row, index) {
-					var simscore = row[2];
-					var pct = parseFloat(simscore.toFixed(5));
-					pct = pct * 100;
+//					var simscore = row[2];
+					var pct = parseFloat(row[2].toFixed(5)) *100;
+//					pct = pct * 100;
 					console.log("pct:", pct);
 					var newrow = [row[0], row[1], pct]
 					this[index] = newrow;

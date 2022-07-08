@@ -406,10 +406,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					for (let col = 0; col <cols; col++) {
 						let cell_value = labelarray[row][col]; 
 						grid[col][row] = labelarray[row][col];
-						if (col = cols) {
-							console.log(labelarray[row][col], row, col);
-							console.log((parseFloat(labelarray[row][col]) * 100));
-						};
+//						if (col = cols) {
+//							console.log(labelarray[row][col], row, col);
+//							console.log((parseFloat(labelarray[row][col]) * 100));
+//						};
 					};
 				};
 

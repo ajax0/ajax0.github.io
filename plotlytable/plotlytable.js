@@ -394,7 +394,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;
-
+				console.log("labelarray", labelarray);
 				const rows = labelarray.length;
 				const cols = labelarray[0].length;
 				let grid = [];

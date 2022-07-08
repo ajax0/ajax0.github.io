@@ -396,7 +396,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var arrayWidth = labelarray[0].length;
 				for (const row of labelarray){
 					console.log("row:", row);
-					pct = parseFloat(row[2]) * 100;
+					pct = parseFloat(row(2)) * 100;
 					console.log("pct:", pct);
 				}
 				console.log("labelarray", labelarray);

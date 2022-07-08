@@ -397,7 +397,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 //				console.log("labelarray1", labelarray);
 				labelarray.forEach(function(row, index) {
 //					var simscore = row[2];
-					var pct = parseFloat(row[2].toFixed(5)) *100;
+					var pct = Math.round(parseFloat(row[2]), 3) * 100;
 //					pct = pct * 100;
 					console.log("pct:", pct);
 					var newrow = [row[0], row[1], pct]

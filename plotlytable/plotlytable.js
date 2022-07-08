@@ -394,7 +394,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				var arrayWidth = labelarray[0].length;
-				console.log("labelarray", labelarray);
+				console.log("labelarray1", labelarray);
 				labelarray.forEach(function(row, index) {
 					var simscore = row[2];
 					var pct = parseFloat(simscore);
@@ -402,7 +402,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					console.log("pct:", pct);
 					this[index] = pct;
 				  }, labelarray); 
-
+				  console.log("labelarray2", labelarray);
 //				for (const row of labelarray){
 //					var simscore = row[2];
 //					var pct = parseFloat(simscore);

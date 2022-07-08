@@ -398,9 +398,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				for (const row of labelarray){
 					console.log("row:", row);
 					console.log("row type:", typeof(row));
-					
-//					pct = parseFloat(row(2) * 100;
-//					console.log("pct:", pct);
+					var simscore = row[2];
+					var pct = parseFloat(simscore);
+					console.log("pct:", pct);
 				}
 				
 				const rows = labelarray.length;

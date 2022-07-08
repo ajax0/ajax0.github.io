@@ -400,7 +400,6 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					var pct = parseFloat(simscore);
 					pct = pct * 100;
 					console.log("pct:", pct);
-					var row = 
 					this[index[2]] = pct;
 				  }, labelarray); 
 				  console.log("labelarray2", labelarray);

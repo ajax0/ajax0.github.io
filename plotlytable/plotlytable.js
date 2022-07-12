@@ -394,7 +394,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
 				labelarray.forEach(function(row, index) {
-					var pct = (parseFloat(row[2])*100).toPrecision(3);
+					var pct = (parseFloat(row[2])*100).toFixed(3);
 					console.log("pct:", pct);
 					var newrow = [row[0], row[1], pct]
 					this[index] = newrow;

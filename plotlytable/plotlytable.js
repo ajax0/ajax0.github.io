@@ -395,11 +395,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var labelarray = myProps["label"];
 				labelarray.forEach(function(row, index) {
 					var pct = (parseFloat(row[2])*100).toFixed(3);
-					console.log("pct:", pct);
 					var newrow = [row[0], row[1], pct]
 					this[index] = newrow;
 				  }, labelarray); 
-				  console.log("labelarray2", labelarray);
 				
 				const rows = labelarray.length;
 				const cols = labelarray[0].length;
@@ -417,6 +415,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 				var data = [{
 					type: 'table',
+					columnwidth: [1,3,1],
 					header: {
 						values: [["<b>Product ID</b>"], ["<b>Description</b>"],	["<b>Similarity</b>"]],
 						align: ["center", "left", "left"],

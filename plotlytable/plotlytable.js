@@ -418,14 +418,14 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					columnwidth: [1,3,1],
 					header: {
 						values: [["<b>Product ID</b>"], ["<b>Description</b>"],	["<b>Similarity</b>"]],
-						align: ["center", "left", "left"],
+						align: ["center", "left", "center"],
 						line: {width: 1, color: 'black'},
 						fill: {color: "grey"},
 						font: {family: "Arial", size: 12, color: "white"}
 					},
 					cells: {
 						values: grid,
-						align: ["center", "left", "left"],
+						align: ["center", "left", "center"],
 						line: {color: "black", width: 1},
 						font: {family: "Arial", size: 11, color: ["black"]}
 					},
@@ -433,7 +433,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 
 				var layout = {
 					height: "750",
-					width: "500",
+//					width: "500",
 					margin: {l: 20, r: 0, b: 0, t: 0}
 					}
 

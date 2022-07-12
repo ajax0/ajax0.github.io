@@ -393,23 +393,13 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			
 			if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
 				var labelarray = myProps["label"];
-				var arrayWidth = labelarray[0].length;
-//				console.log("labelarray1", labelarray);
 				labelarray.forEach(function(row, index) {
-//					var simscore = row[2];
-					var pct = Math.round(parseFloat(row[2])*100, 3);
-//					pct = pct * 100;
+					var pct = (parseFloat(row[2])*100).toPrecision(3);
 					console.log("pct:", pct);
 					var newrow = [row[0], row[1], pct]
 					this[index] = newrow;
 				  }, labelarray); 
 				  console.log("labelarray2", labelarray);
-//				for (const row of labelarray){
-//					var simscore = row[2];
-//					var pct = parseFloat(simscore);
-//					pct = pct * 100;
-//					console.log("pct:", pct);
-//				};
 				
 				const rows = labelarray.length;
 				const cols = labelarray[0].length;
@@ -422,10 +412,6 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					for (let col = 0; col <cols; col++) {
 						let cell_value = labelarray[row][col]; 
 						grid[col][row] = labelarray[row][col];
-//						if (col = cols) {
-//							console.log(labelarray[row][col], row, col);
-//							console.log((parseFloat(labelarray[row][col]) * 100));
-//						};
 					};
 				};
 

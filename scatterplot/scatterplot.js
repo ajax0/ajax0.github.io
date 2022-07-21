@@ -429,12 +429,14 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				if (myProps["label"] != "") {
 					var selProdDesc = myProps["label"][0][1];
 					console.log("myProps label", myProps["label"]);
-					for (const marker of myProps["label"]) {
-						console.log("marker inside loop: ", marker);
-						markers.push(marker[1]);
-						};
-					console.log("markers: ", markers);
+					for (const element of myProps["label"]) {
+						for (const prop of element) {
+							console.log("element property inside loop: ", prop);
+							markers.push(prop);
+							};
+						console.log("markers: ", markers);
 					};
+				};
 
 				var layout = { 
 							hovermode: 'closest',

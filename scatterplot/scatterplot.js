@@ -424,10 +424,15 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				};	
 				var data = [trace1, trace2];
 				var selProdDesc = "Selected Product";
+				var markers = [];
 				
 				if (myProps["label"] != "") {
 					var selProdDesc = myProps["label"][0][1];
-				};
+					for (let marker in myProps["label"]) {
+						markers.append(marker[1]);
+						};
+					console.log("markers: ", markers);
+					};
 
 				var layout = { 
 							hovermode: 'closest',

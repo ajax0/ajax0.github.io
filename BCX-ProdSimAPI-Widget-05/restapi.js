@@ -215,7 +215,7 @@
         }
 
     }
-    customElements.define("com-fd-djaja-sap-sac-restapi", restAPI);
+    customElements.define("com-bcx-sac-restapi", restAPI);
 
     function UI5(changedProperties, that) {
         var that_ = that;

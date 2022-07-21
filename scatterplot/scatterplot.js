@@ -428,7 +428,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				
 				if (myProps["label"] != "") {
 					var selProdDesc = myProps["label"][0][1];
+					console.log("myProps label", myProps["label"]);
 					for (let marker in myProps["label"]) {
+						console.log("marker inside loop: ", marker);
 						markers.push(marker[1]);
 						};
 					console.log("markers: ", markers);

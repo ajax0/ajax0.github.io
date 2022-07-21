@@ -430,10 +430,14 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					var selProdDesc = myProps["label"][0][1];
 					console.log("myProps label", myProps["label"]);
 					for (const element of myProps["label"]) {
+						var i = 0;
 						for (const prop of element) {
-							console.log("element property inside loop: ", prop);
+							if (i = 1) {
+							console.log("element property inside loop: ", prop);							
 							markers.push(prop);
 							};
+							i = i + 1;	
+						};
 						console.log("markers: ", markers);
 					};
 				};

@@ -429,7 +429,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				if (myProps["label"] != "") {
 					var selProdDesc = myProps["label"][0][1];
 					for (let marker in myProps["label"]) {
-						markers.append(marker[1]);
+						markers.push(marker[1]);
 						};
 					console.log("markers: ", markers);
 					};

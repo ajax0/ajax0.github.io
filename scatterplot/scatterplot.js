@@ -420,8 +420,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						color: 'rgba(217, 239, 239, 0.14)',
 						width: 0.5},
 						opacity: 0.8},
+					
 					text: markers,
-					hovertemplate: '%{text}',
+					hovertemplate: '%{text}<extra></extra>',
 					type: 'scatter3d'
 				};	
 				var trace2 = {
@@ -433,8 +434,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						color: 'rgba(217, 217, 217, 0.14)',
 						width: 0.5},
 						opacity: 0.8},
-					text: selProdDesc,
-					hovertemplate: '<b>%{text}</b>',
+					hoverinfo: 'skip',
 					type: 'scatter3d'
 				};	
 				

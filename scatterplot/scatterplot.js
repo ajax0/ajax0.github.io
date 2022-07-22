@@ -399,6 +399,25 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 				var ann_x = x_data[0];
 				var ann_y = y_data[0];
 				var ann_z = z_data[0];
+				var selProdDesc = "Selected Product";
+				var markers = [];
+				
+				if (myProps["label"] != "") {
+					var selProdDesc = myProps["label"][0][1];
+					console.log("myProps label", myProps["label"]);
+					for (const element of myProps["label"]) {
+						var j = 0;
+						for (const prop of element) {
+							if (j == 1) {
+										console.log("element property inside loop: ", prop);
+										console.log("element: ", j);							
+										markers.push(prop[j]);
+									};
+							j = j + 1;	
+						};
+					};
+					console.log("markers: ", markers);
+				};
 
 				var trace1 = {
 					x: x_data, y: y_data, z: z_data,
@@ -409,6 +428,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						color: 'rgba(217, 239, 239, 0.14)',
 						width: 0.5},
 						opacity: 0.8},
+					text = markers,
+					hovertext = markers,
+					hoverinfo = 'text',
 					type: 'scatter3d'
 				};	
 				var trace2 = {
@@ -422,26 +444,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						opacity: 0.8},
 					type: 'scatter3d'
 				};	
-				var data = [trace1, trace2];
-				var selProdDesc = "Selected Product";
-				var markers = [];
 				
-				if (myProps["label"] != "") {
-					var selProdDesc = myProps["label"][0][1];
-					console.log("myProps label", myProps["label"]);
-					for (const element of myProps["label"]) {
-						var j = 0;
-						for (const prop of element) {
-							if (j = 1) {
-										console.log("element property inside loop: ", prop);
-										console.log("element: ", j);							
-										markers.push(prop[j]);
-									};
-							j = j + 1;	
-						};
-					};
-					console.log("markers: ", markers);
-				};
+				var data = [trace1, trace2];
 
 				var layout = { 
 							hovermode: 'closest',

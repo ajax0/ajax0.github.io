@@ -435,7 +435,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 							if (j = 1) {
 										console.log("element property inside loop: ", prop);
 										console.log("element: ", j);							
-										markers.push(prop);
+										markers.push(prop[i]);
 									};
 							j = j + 1;	
 						};

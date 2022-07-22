@@ -428,9 +428,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						color: 'rgba(217, 239, 239, 0.14)',
 						width: 0.5},
 						opacity: 0.8},
-					text = markers,
-					hovertext = markers,
-					hoverinfo = 'text',
+					text: markers,
+					hovertemplate: '%{text}',
 					type: 'scatter3d'
 				};	
 				var trace2 = {

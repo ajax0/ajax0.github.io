@@ -377,13 +377,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 			this._props = {};
 		}
 
-		connectedCallback(){
-			
-		}
+		connectedCallback(){}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
-
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
@@ -408,15 +405,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 					for (const element of myProps["label"]) {
 						var j = 0;
 						for (const prop of element) {
-							if (j == 1) {
-										console.log("element property inside loop: ", prop);
-										console.log("element: ", j);							
-										markers.push(prop);
-									};
+							if (j == 1) {markers.push(prop); };
 							j = j + 1;	
 						};
 					};
-					console.log("markers: ", markers);
 				};
 
 				var trace1 = {
@@ -441,6 +433,8 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 						color: 'rgba(217, 217, 217, 0.14)',
 						width: 0.5},
 						opacity: 0.8},
+					text: selProdDesc,
+					hovertemplate: '<b>%{text}</b>',
 					type: 'scatter3d'
 				};	
 				

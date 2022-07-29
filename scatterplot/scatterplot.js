@@ -458,7 +458,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 									ay: -50,
 									arrowcolor: "black",
 									arrowsize: 2,
-									arrowwidth: 1,
+									arrowwidth: 2,
 									arrowhead: 2,
 									bgcolor:'#ffffff',
 									opacity: 0.8

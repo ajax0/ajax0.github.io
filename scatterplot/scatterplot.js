@@ -446,9 +446,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 							height: "800",
 							margin: {l: 20, r: 0, b: 0, t: 0},
 							scene: {
-								xaxis: {title: ""},
-								yaxis: {title: ""},
-								zaxis: {title: ""},
+								xaxis: {title: "", dtick: 0.1},
+								yaxis: {title: "", dtick: 0.1},
+								zaxis: {title: "", dtick: 0.1},
 								annotations: [{
 									x: ann_x,
 									y: ann_y,
